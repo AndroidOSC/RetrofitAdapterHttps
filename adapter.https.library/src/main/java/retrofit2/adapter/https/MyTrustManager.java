@@ -15,9 +15,6 @@ import javax.net.ssl.X509TrustManager;
  * 自定义实现证书信任管理
  *
  * @author atomOne
- * @data 2018/8/16/016
- * @describe TODO
- * @email 1299854942@qq.com
  */
 public class MyTrustManager implements X509TrustManager {
     private X509TrustManager defaultTrustManager;

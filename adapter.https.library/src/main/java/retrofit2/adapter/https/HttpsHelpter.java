@@ -18,9 +18,6 @@ import okhttp3.OkHttpClient;
 
 /**
  * @author atomOne
- * @data on 2018/8/16/016 11:11
- * @describe TODO
- * @email 1299854942@qq.com
  */
 public class HttpsHelpter {
 
@@ -32,6 +29,8 @@ public class HttpsHelpter {
      * 为okhttpClient配置ssl,实现https单向认证
      *
      * @param clientBuilder OKhttpClient.builder
+     * @param inputStream   证书内容
+     * @param alias         证书别名
      */
     public static void buildOkhttpSSLOneAuth(OkHttpClient.Builder clientBuilder, InputStream inputStream, String alias) {
         try {
@@ -67,9 +66,11 @@ public class HttpsHelpter {
     /**
      * 为okhttpClient配置ssl,实现https双向认证
      *
-     * @param clientBuilder
-     * @param clientCer
-     * @param serverTrust
+     * @param clientBuilder OKhttpClient.builder
+     * @param clientCer     客户端证书
+     * @param clientPass    客户端证书密码
+     * @param serverTrust   服务端信任证书
+     * @param trustPass     服务端信任证密码
      */
     public static void buildOkhttpSSLTwoAuth(OkHttpClient.Builder clientBuilder, InputStream clientCer, String clientPass, InputStream serverTrust, String trustPass) {
         try {

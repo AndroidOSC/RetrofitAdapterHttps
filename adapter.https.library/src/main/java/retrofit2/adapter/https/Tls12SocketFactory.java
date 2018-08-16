@@ -13,9 +13,6 @@ import javax.net.ssl.SSLSocketFactory;
  * Android 4.X 对TLS1.1、TLS1.2的支持参考了http://blog.csdn.net/joye123/article/details/53888252
  *
  * @author atomOne
- * @data 2018/8/16/016
- * @describe TODO
- * @email 1299854942@qq.com
  */
 public class Tls12SocketFactory extends SSLSocketFactory {
 

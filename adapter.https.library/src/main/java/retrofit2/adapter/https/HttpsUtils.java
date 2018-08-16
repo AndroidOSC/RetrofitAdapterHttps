@@ -28,9 +28,6 @@ import javax.net.ssl.X509TrustManager;
  * https 工具类
  *
  * @author atomOne
- * @data 2018/8/16/016
- * @describe TODO
- * @email 1299854942@qq.com
  */
 public class HttpsUtils {
 
@@ -52,7 +49,7 @@ public class HttpsUtils {
      * @param certificatesId "XXX.cer" 文件 (文件位置res/raw/XXX.cer)
      * @param bksFileId      "XXX.bks"文件(文件位置res/raw/XXX.bks)
      * @param password       The certificate's password.
-     * @return SSLParams
+     * @return SSLParams     包装的 SS
      */
     public static SSLParams getSslSocketFactory(Context context, @RawRes int[] certificatesId, @RawRes int bksFileId, String password) {
         if (context == null) {
@@ -95,9 +92,9 @@ public class HttpsUtils {
     /**
      * 构建TrustManager[]
      *
-     * @param context
-     * @param certificatesId
-     * @return
+     * @param context        上下文
+     * @param certificatesId 证书资源ID集合
+     * @return TrustManager[]
      */
     private static TrustManager[] prepareTrustManager(Context context, int[] certificatesId) {
         if (certificatesId == null || certificatesId.length <= 0) {
@@ -142,9 +139,9 @@ public class HttpsUtils {
     /**
      * 获取keyManager[]
      *
-     * @param context
-     * @param bksFileId
-     * @param password
+     * @param context   上下文
+     * @param bksFileId 证书
+     * @param password  证书密码
      * @return
      */
     private static KeyManager[] prepareKeyManager(Context context, @RawRes int bksFileId, String password) {
@@ -166,8 +163,8 @@ public class HttpsUtils {
     /**
      * 获取X509TrustManager
      *
-     * @param trustManagers
-     * @return
+     * @param trustManagers 信任集合
+     * @return X509TrustManager
      */
     public static X509TrustManager chooseTrustManager(TrustManager[] trustManagers) {
         for (TrustManager trustManager : trustManagers) {

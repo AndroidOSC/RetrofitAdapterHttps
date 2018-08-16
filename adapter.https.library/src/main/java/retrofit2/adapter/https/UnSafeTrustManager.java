@@ -12,9 +12,6 @@ import javax.net.ssl.X509TrustManager;
  * 存在很大的安全漏洞
  *
  * @author atomOne
- * @data 2018/8/16/016
- * @describe TODO
- * @email 1299854942@qq.com
  */
 public class UnSafeTrustManager implements X509TrustManager {
 
