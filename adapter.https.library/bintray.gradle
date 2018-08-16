@@ -13,7 +13,7 @@ allprojects {
 }
 
 
-def siteUrl = 'https://github.com/atom-li/RetrofitAdapterHttps'   // 项目在github的主页
+def siteUrl = 'https://github.com/AndroidOSC/RetrofitAdapterHttps'   // 项目在github的主页
 
 
 //添加发布模块
