@@ -2,6 +2,7 @@ package com.atomone.retrofitadapterhttps.network;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.Url;
 
 
@@ -17,6 +18,7 @@ public interface ApiService {
     /**
      * get数据
      */
+    @Headers("User: abc")
     @GET
     Observable<String> getData(@Url String url);
 }
